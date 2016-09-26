@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin">
+
+    <!-- An invisible view aligned to the center of the parent. Allows other
+    views to be arranged on either side -->
+    <View
+        android:id="@+id/centerShim"
+        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:visibility="invisible"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:text="@string/today"
+        android:layout_marginTop="40dp"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:textStyle="normal"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/centerShim"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView" />
+
+    <TextView
+        android:text="@string/highDegree"
+        android:layout_marginTop="20dp"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/centerShim"
+        android:id="@+id/highDegLabel" />
+
+    <TextView
+        android:text="@string/lowDegree"
+        android:layout_marginTop="5dp"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/highDegLabel"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/centerShim"
+        android:id="@+id/lowDegLabel" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/centerShim"
+        android:layout_below="@id/textView"
+        android:src="@drawable/ic_launcher" />
+
+    <TextView
+        android:text="@string/cloudy"
+        android:layout_marginTop="5dp"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:textStyle="normal"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/centerShim"
+        android:layout_below="@id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cloudyText" />   </RelativeLayout>
